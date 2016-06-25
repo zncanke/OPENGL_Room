@@ -1,2 +1,3 @@
 ﻿  main.cpp
-  Final.vcxproj -> c:\users\maxwell\documents\visual studio 2015\Projects\Final\Debug\Final.exe
+c:\users\maxwell\documents\visual studio 2015\projects\final\final\main.cpp(55): warning C4018: “<”: 有符号/无符号不匹配
+  Final.vcxproj -> C:\Users\Maxwell\Documents\Visual Studio 2015\Projects\Final\Debug\Final.exe
