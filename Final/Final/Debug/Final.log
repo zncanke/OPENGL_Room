@@ -1,3 +1,4 @@
 ﻿  main.cpp
-c:\users\maxwell\documents\visual studio 2015\projects\final\final\main.cpp(55): warning C4018: “<”: 有符号/无符号不匹配
-  Final.vcxproj -> C:\Users\Maxwell\Documents\Visual Studio 2015\Projects\Final\Debug\Final.exe
+z:\github\opengl_room\final\final\main.cpp(55): warning C4018: “<”: 有符号/无符号不匹配
+  LINK : 没有找到 Z:\Github\OPENGL_Room\Final\Debug\Final.exe 或上一个增量链接没有生成它；正在执行完全链接
+  Final.vcxproj -> Z:\Github\OPENGL_Room\Final\Debug\Final.exe

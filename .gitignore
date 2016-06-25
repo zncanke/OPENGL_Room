@@ -27,3 +27,17 @@
 *.exe
 *.out
 *.app
+
+*.ilk
+
+*.pdb
+
+*.log
+
+*.tlog
+
+*.idb
+
+Final/Final/Debug/Final.tlog/Final.lastbuildstate
+
+Final/Final.VC.VC.opendb

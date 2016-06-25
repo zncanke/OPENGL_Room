@@ -185,7 +185,7 @@ void Draw(){
 
 	glPushMatrix();
 	glTranslatef(30, 0, -11.5);
-	draw_cuboid(16, 9, 0.5);
+	draw_cuboid(7.5, 9, 0.5);
 	glPopMatrix();
 
 	glPushMatrix();
