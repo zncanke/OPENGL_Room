@@ -1,0 +1,45 @@
+# Exported from 3D Builder
+
+newmtl 0_0
+Kd 0.640000 0.640000 0.640000
+
+newmtl 0_1
+Kd 0.640000 0.640000 0.640000
+
+newmtl 0_2
+Kd 0.640000 0.640000 0.640000
+
+newmtl 1_0
+Kd 1.000000 1.000000 1.000000
+map_Kd col.png
+
+newmtl 2_0
+Kd 1.000000 1.000000 1.000000
+map_Kd col.png
+
+newmtl 2_1
+Kd 1.000000 1.000000 1.000000
+map_Kd col.png
+
+newmtl 2_2
+Kd 1.000000 1.000000 1.000000
+map_Kd col.png
+
+newmtl 2_3
+Kd 0.640000 0.640000 0.640000
+
+newmtl 2_4
+Kd 1.000000 1.000000 1.000000
+map_Kd col.png
+
+newmtl 2_5
+Kd 1.000000 1.000000 1.000000
+map_Kd col.png
+
+newmtl 2_6
+Kd 1.000000 1.000000 1.000000
+map_Kd col.png
+
+newmtl 2_7
+Kd 1.000000 1.000000 1.000000
+map_Kd col.png

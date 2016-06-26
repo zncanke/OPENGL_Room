@@ -1,0 +1,399 @@
+# Max2Mtl Version 4.0 Mar 10th, 2001
+#
+# Multi/Sub Material__163 (7) to come 
+#
+newmtl 10_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl wooüd_mebel
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl Material__50351
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 09_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl metal_crhom
+Ka  0.0 0.0 0.0
+Kd  0.6 0.6 0.6
+Ks  1.0 1.0 1.0
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 01_-_Default
+Ka  1.0 1.0 1.0
+Kd  1.0 1.0 1.0
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 06_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__163 done 
+#
+# Multi/Sub Material__338 (8) to come 
+#
+newmtl 01_-_Default
+Ka  0.1 0.1 0.1
+Kd  0.1 0.1 0.1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl Material__50351
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl Glass_Saluto
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  1.0 1.0 1.0
+d  0.4
+Ns  10.0
+illum 2
+#
+newmtl 10_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  1.0 1.0 1.0
+d  0.2
+Ns  10.0
+illum 2
+#
+newmtl 09_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  0.0
+illum 2
+#
+newmtl brushed_metal_01
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 06_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 07_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.8 0.8 0.8
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__338 done 
+#
+newmtl metal_crhom
+Ka  0.0 0.0 0.0
+Kd  0.6 0.6 0.6
+Ks  1.0 1.0 1.0
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl simple_metal_0_60
+Ka  0.0 0.0 0.0
+Kd  0.6 0.6 0.6
+Ks  1.0 1.0 1.0
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 06_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 07_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.8 0.8 0.8
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl Material__622
+Ka  0.1 0.1 0.1
+Kd  0.1 0.1 0.1
+Ks  0.7 0.7 0.7
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__199 (4) to come 
+#
+newmtl brushed_metal_01
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl metal_crhom
+Ka  0.0 0.0 0.0
+Kd  0.6 0.6 0.6
+Ks  1.0 1.0 1.0
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 06_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 09_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  0.0
+illum 2
+#
+# Multi/Sub Material__199 done 
+#
+newmtl 15_-_Default2
+Ka  0.0 0.0 0.0
+Kd  0.8 0.8 0.8
+Ks  0.2 0.2 0.2
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__360 (8) to come 
+#
+newmtl 01_-_Default
+Ka  0.1 0.1 0.1
+Kd  0.1 0.1 0.1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl Material__50351
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl Glass_Saluto
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  1.0 1.0 1.0
+d  0.4
+Ns  10.0
+illum 2
+#
+newmtl 10_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  1.0 1.0 1.0
+d  0.2
+Ns  10.0
+illum 2
+#
+newmtl 09_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  0.0
+illum 2
+#
+newmtl brushed_metal_01
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 06_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 07_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.8 0.8 0.8
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__360 done 
+#
+# Multi/Sub Material__90 (4) to come 
+#
+newmtl Material__644
+Ka  0.0 0.0 0.0
+Kd  0.9 0.9 0.9
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 06_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.9 0.9 0.9
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl Material__50162
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  1.0 1.0 1.0
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl silver_01
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.8 0.8 0.8
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__90 done 
+#
+# Multi/Sub Material__149 (2) to come 
+#
+newmtl simple_metal_0_60
+Ka  0.0 0.0 0.0
+Kd  0.6 0.6 0.6
+Ks  1.0 1.0 1.0
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl glass_28
+Ka  0.0 0.0 0.0
+Kd  0.4 0.4 0.4
+Ks  0.7 0.7 0.7
+d  0.2
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__149 done 
+#
+# Multi/Sub Material__79 (6) to come 
+#
+newmtl 10_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl wooüd_mebel
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl Material__50351
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 09_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl metal_crhom
+Ka  0.0 0.0 0.0
+Kd  0.6 0.6 0.6
+Ks  1.0 1.0 1.0
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 01_-_Default
+Ka  1.0 1.0 1.0
+Kd  1.0 1.0 1.0
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__79 done 
+#
+newmtl 15_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.3 0.5 0.1
+Ks  0.2 0.2 0.2
+d  1.0
+Ns  10.0
+illum 2
+#
+# EOF
