@@ -1,4 +1,3 @@
 ﻿  main.cpp
-z:\github\opengl_room\final\final\main.cpp(55): warning C4018: “<”: 有符号/无符号不匹配
-  LINK : 没有找到 Z:\Github\OPENGL_Room\Final\Debug\Final.exe 或上一个增量链接没有生成它；正在执行完全链接
-  Final.vcxproj -> Z:\Github\OPENGL_Room\Final\Debug\Final.exe
+c:\users\frag\desktop\opengl_room\final\final\main.cpp(55): warning C4018: “<”: 有符号/无符号不匹配
+LINK : fatal error LNK1104: 无法打开文件“glut32.lib”

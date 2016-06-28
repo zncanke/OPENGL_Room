@@ -1,15 +1,14 @@
 ﻿  main.cpp
-c:\users\frag\desktop\final\final\glm.cpp(1515): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“GLfloat *”
-c:\users\frag\desktop\final\final\main.cpp(72): warning C4018: “<”: 有符号/无符号不匹配
-c:\users\frag\desktop\final\final\main.cpp(480): warning C4018: “<”: 有符号/无符号不匹配
-c:\users\frag\desktop\final\final\main.cpp(517): warning C4477: “sprintf_s”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“time_t”
-  c:\users\frag\desktop\final\final\main.cpp(517): note: 请考虑在格式字符串中使用“%lld”
-  c:\users\frag\desktop\final\final\main.cpp(517): note: 请考虑在格式字符串中使用“%I64d”
-c:\users\frag\desktop\final\final\main.cpp(505): warning C4101: “clnHeight”: 未引用的局部变量
-c:\users\frag\desktop\final\final\main.cpp(505): warning C4101: “clnWidth”: 未引用的局部变量
-c:\users\frag\desktop\final\final\main.cpp(507): warning C4101: “rc”: 未引用的局部变量
-c:\users\frag\desktop\final\final\main.cpp(715): warning C4101: “angle”: 未引用的局部变量
-  AVICube.cpp
-  AVI.cpp
-  正在生成代码...
-  Final.vcxproj -> C:\Users\Frag\Desktop\Final\Debug\Final.exe
+c:\users\frag\desktop\opengl_room\final\glm.cpp(1515): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“GLfloat *”
+c:\users\frag\desktop\opengl_room\final\main.cpp(88): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\frag\desktop\opengl_room\final\main.cpp(281): warning C4838: 从“double”转换到“GLfloat”需要收缩转换
+c:\users\frag\desktop\opengl_room\final\main.cpp(292): warning C4838: 从“double”转换到“GLfloat”需要收缩转换
+c:\users\frag\desktop\opengl_room\final\main.cpp(564): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\frag\desktop\opengl_room\final\main.cpp(601): warning C4477: “sprintf_s”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“time_t”
+  c:\users\frag\desktop\opengl_room\final\main.cpp(601): note: 请考虑在格式字符串中使用“%lld”
+  c:\users\frag\desktop\opengl_room\final\main.cpp(601): note: 请考虑在格式字符串中使用“%I64d”
+c:\users\frag\desktop\opengl_room\final\main.cpp(589): warning C4101: “clnHeight”: 未引用的局部变量
+c:\users\frag\desktop\opengl_room\final\main.cpp(589): warning C4101: “clnWidth”: 未引用的局部变量
+c:\users\frag\desktop\opengl_room\final\main.cpp(591): warning C4101: “rc”: 未引用的局部变量
+c:\users\frag\desktop\opengl_room\final\main.cpp(902): warning C4101: “angle”: 未引用的局部变量
+  Final.vcxproj -> C:\Users\Frag\Desktop\OPENGL_Room\Debug\Final.exe

@@ -3,23 +3,29 @@
 #include <math.h>
 #include <time.h>
 #include "glm.cpp"
+#include "nurbs.cpp"
 #define PI 3.1415926
 #define  GLUT_WHEEL_UP 3           //定义滚轮操作  
 #define  GLUT_WHEEL_DOWN 4  
 using namespace std;
 
 #define BITMAP_ID 0x4D42
-
+Nurbs nurbs;
 auto aviCube = new AVICube(5, 0, 0, 0, "Face3.avi", "taxi.avi", "windows.avi", "windows.avi", "windows.avi", "windows.avi");
 
 float eye[] = { 15, 5, -5 };
-float center[] = { 15, 5, -20 };
-float polar[] = {15, -90, 90};
+float center[] = { 15, 5, -10 };
+float polar[] = {5, -90, 90};
+GLfloat light_p[] = { 10,8,-10,1 };
+GLfloat yellow_l[] = { 1,1,1,1 };
+GLfloat blue_l[] = { 0,0,1,1 };
+int color = 0;
 float zoom = 60;
 float Height, Width;
 float r = 0;
 bool g_on = false;
-GLMmodel *kitcken_model, *chaji_model, *sofa_model, *bed_model, *tv_model, *door_model;
+bool tv_on = false;
+GLMmodel *kitcken_model, *chaji_model, *sofa_model, *bed_model, *tv_model, *door_model,*light_model;
 int l_button_down = FALSE;
 struct P                      /*用于记录鼠标位置*/
 {
@@ -27,7 +33,17 @@ struct P                      /*用于记录鼠标位置*/
 	int y;
 }oldpt;
 
-GLuint texture[10];
+struct {
+	bool exist = false;
+	bool rotate = false;
+	float zoom = 1;
+	int color = 0;
+	int tex = 0;
+	float pos[3];
+} object[10];
+int object_id = 1;
+
+GLuint texture[15];
 
 unsigned char *LoadBitmapFile(char *filename, BITMAPINFOHEADER *bitmapInfoHeader)
 {
@@ -97,6 +113,7 @@ void texload(int i, char *filename)
 
 void init()
 {
+	nurbs.init();
 	glGenTextures(10, texture);                                         // 第一参数是需要生成标示符的个数, 第二参数是返回标示符的数组
 	texload(0, "table2.bmp");
 	texload(1, "3.bmp");
@@ -109,6 +126,7 @@ void init()
 	texload(6, "bed.bmp");
 	texload(7, "tv.bmp");
 	texload(9, "door.bmp");
+	texload(10, "deng.bmp");
 
 	kitcken_model = glmReadOBJ("obj/kitchen.obj");
 	glmUnitize(kitcken_model);
@@ -147,6 +165,18 @@ void init()
 	glmScale(door_model, 6);
 	glmFacetNormals(door_model);
 	glmVertexNormals(door_model, 90);
+
+
+	light_model = glmReadOBJ("obj/deng.obj");
+	glmUnitize(light_model);
+	glmScale(light_model, 1);
+	glmFacetNormals(light_model);
+	glmVertexNormals(light_model, 90);
+
+
+
+
+
 }
 
 void draw_cuboid(float x, float y, float z) {
@@ -220,6 +250,54 @@ void draw_fan(float rotate) {
 }
 
 void Draw(){
+	glPushMatrix();
+	glTranslatef(15, 0, -10);
+	nurbs.drawNurbs();
+	glPopMatrix();
+
+	for (int i = 1; i < 3; i++) {
+		if (object[i].exist) {
+			switch (i) {
+			case 1: {
+				if (object[i].tex) {
+					glEnable(GL_TEXTURE_2D);
+					//glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+					glBindTexture(GL_TEXTURE_2D, texture[object[i].tex + 8]);
+				}
+				glPushMatrix();
+				glTranslatef(object[i].pos[0], object[i].pos[1], object[i].pos[2]);
+				if (object[i].rotate)
+					glRotatef(r, 0, 1, 0);
+				glScalef(object[i].zoom, object[i].zoom, object[i].zoom);
+				glutSolidTeapot(0.4);
+				glPopMatrix();
+				if (object[i].tex) {
+					glDisable(GL_TEXTURE_2D);
+				}
+				break;
+			}
+			case 2: {
+				if (object[i].color) {
+					GLfloat teapot[] = { 0.85, 0.65, 0.25, 1.0 };
+					glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, teapot);
+				}
+				glPushMatrix();
+				glTranslatef(object[i].pos[0], object[i].pos[1], object[i].pos[2]);
+				if (object[i].rotate)
+					glRotatef(r, 0, 1, 0);
+				glScalef(object[i].zoom, object[i].zoom, object[i].zoom);
+				glutSolidCube(0.4);
+				glPopMatrix();
+				if (object[i].color) {
+					GLfloat default[] = { 0.8, 0.8, 0.8, 1.0 };
+					glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, default);
+				}
+				break;
+			}
+			}
+		}
+	}
+
 	glEnable(GL_TEXTURE_2D);
 	//glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 	glBindTexture(GL_TEXTURE_2D, texture[0]);
@@ -419,11 +497,17 @@ void Draw(){
 	glPushMatrix();
 	glBindTexture(GL_TEXTURE_2D, texture[9]);
 	glTranslatef(4, 0, -0.3);
-	//glRotatef(180, 0, 1, 0);
 	glScalef(1, 1.4, 1);
 	glmDraw(door_model, GLM_SMOOTH | GLM_TEXTURE);
 	glPopMatrix();
 	glDisable(GL_TEXTURE_2D);
+
+	/*glPushMatrix();
+	glTranslatef(light_p[0], light_p[1], light_p[2]);
+	glutSolidSphere(2, 10, 10);
+
+	glPopMatrix();*/
+
 }
 
 void reshape(int width, int height){
@@ -629,8 +713,79 @@ void checkPos(unsigned char k, int x, int y) {
 }
 
 void key(unsigned char k, int x, int y){
+	if (k <= '9' && k >= '0') {
+		object_id = k - '0';
+	}
 	switch (k)
 	{
+	case 'h':{
+		tv_on = !tv_on;
+	}
+	case 'x': {
+		object[object_id].rotate = !object[object_id].rotate;
+		break;
+	}
+	case 'v': {
+		if (object[object_id].zoom >= 0.5)
+			object[object_id].zoom -= 0.1;
+		break;
+	}
+	case 'b': {
+		if (object[object_id].zoom <= 2)
+			object[object_id].zoom += 0.1;
+		break;
+	}
+	case 'i': {
+		object[object_id].pos[2] -= 0.2;
+		break;
+	}
+	case 'k': {
+		object[object_id].pos[2] = object[object_id].pos[2] + 0.2;
+		break;
+	}
+	case 'j': {
+		object[object_id].pos[0] -= 0.2;
+		break;
+	}
+	case 'l': {
+		object[object_id].pos[0] += 0.2;
+		break;
+	}
+	case 'n': {
+		object[object_id].pos[1] += 0.2;
+		break;
+	}
+	case 'm': {
+		object[object_id].pos[1] -= 0.2;
+		break;
+	}
+	case '=': {
+		if (!object[object_id].exist) {
+			object[object_id].exist = true;
+			object[object_id].pos[0] = center[0];
+			object[object_id].pos[1] = center[1];
+			object[object_id].pos[2] = center[2];
+		}
+		break;
+	}
+	case '-': {
+		object[object_id].exist = false;
+		break;
+	}
+	case 't': {
+		if (object[object_id].exist) {
+			if (++object[object_id].tex == 3)
+				object[object_id].tex = 0;
+		}
+		break;
+	}
+	case 'y': {
+		if (object[object_id].exist) {
+			if (++object[object_id].color == 3)
+				object[object_id].color = 0;
+		}
+		break;
+	}
 	case 'a': {
 		checkPos(k, x, y);
 		break;
@@ -676,6 +831,14 @@ void key(unsigned char k, int x, int y){
 	case 'g':{
 		g_on = !g_on;
 	}
+
+	case '6': {light_p[0]++; break; }
+	case '4': {light_p[0]--; break; }
+	case '8': {light_p[1]++; break; }
+	case '2': {light_p[1]--; break; }
+	case '7': {light_p[2]++; break; }
+	case '9': {light_p[2]--; break; }
+	case '*': {color=1-color; break; }
 	}
 }
 
@@ -690,9 +853,33 @@ void redraw(){
 
 	glEnable(GL_DEPTH_TEST);
 
-	//aviCube->render();
-	//aviCube->CheckFrame(16);
-	Draw();			
+	Draw();
+	if (tv_on) {
+		aviCube->render();
+		aviCube->CheckFrame(16);
+	}
+		
+
+	// light
+	GLfloat sun_light_ambient[] = { 1, 1, 1, 1.0f };
+	glShadeModel(GL_SMOOTH);
+	glLightfv(GL_LIGHT0, GL_POSITION, light_p); //指定光源的位置
+	if (color == 0)
+	{
+		glLightfv(GL_LIGHT0, GL_DIFFUSE, yellow_l);  //设定漫反射效果
+		glLightfv(GL_LIGHT0, GL_SPECULAR, yellow_l); //设定高光反射效果
+	}
+	else
+	{
+		glLightfv(GL_LIGHT0, GL_DIFFUSE, blue_l);  //设定漫反射效果
+		glLightfv(GL_LIGHT0, GL_SPECULAR, blue_l); //设定高光反射效果
+	}
+	glLightfv(GL_LIGHT0, GL_AMBIENT, sun_light_ambient);
+	glLightModeli(GL_LIGHT_MODEL_TWO_SIDE, GL_TRUE);
+	glEnable(GL_LIGHTING); //启用光源
+	glEnable(GL_LIGHT0);   //使用指定灯光
+	glEnable(GL_DEPTH_TEST);
+
 	glutSwapBuffers();
 }
 
